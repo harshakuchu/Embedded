@@ -3,7 +3,7 @@
 //
 
 #include <day01/day1.h>
-#include <utilslib/Fileloader.h>
+#include <utilslib/FileLoader.h>
 #include <iostream>
 #include <list>
 #include <algorithm>    // find
