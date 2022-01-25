@@ -3,12 +3,27 @@ pipeline{
     stages {
         stage('git checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/harshakuchu/Embedded.git'
+                git branch: 'dev', url: 'https://github.com/harshakuchu/Embedded.git'
+            }
+        }
+        stage('mkdir'){
+            steps{
+                sh. mkdir project
+            }
+        }
+        stage('cd'){
+            steps{
+                sh. cd project
             }
         }
         stage('Cmake Build'){
             steps{
-                cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: '/home/ubuntu/Embedded/'
+                sh. cmake ..
+            }
+        }
+        stage('Make'){
+            steps{
+                sh. make
             }
         }
     }
