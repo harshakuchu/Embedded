@@ -8,9 +8,6 @@ pipeline{
         }
         stage('Cmake Build'){
             steps{
-                sh 'pwd'
-                sh 'sudo apt install cmake'
-                sh 'cd /var/lib/jenkins/workspace/pp2/'
                 sh 'cmake ..'
             }
         }
