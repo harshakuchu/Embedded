@@ -3,16 +3,12 @@ pipeline{
     stages {
         stage('git checkout'){
             steps{
-                git branch: 'dev', url: 'https://github.com/harshakuchu/Embedded.git'
+                git branch: 'feature', url: 'https://github.com/harshakuchu/Embedded.git'
             }
         }
-        stage('mkdir'){
+        stage('making director'){
             steps{
                 sh 'mkdir project'
-            }
-        }
-        stage('cd'){
-            steps{
                 sh 'cd project'
             }
         }
