@@ -1,18 +1,20 @@
 pipeline{
     agent any
+    stages {
         stage('git checkout'){
                 git branch: 'dev', url: 'https://github.com/harshakuchu/Embedded.git'
             }
         stage('mkdir'){
-                sh. 'mkdir project'
+                sh 'mkdir project'
             }
         stage('cd'){
-                sh. 'cd project'
+                sh 'cd project'
             }
         stage('Cmake Build'){
-                sh. 'cmake ..'
+                sh 'cmake ..'
             }
         stage('Make'){
-                sh. 'make'
+                sh 'make'
           }
+    }
 }
