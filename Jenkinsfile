@@ -6,10 +6,9 @@ pipeline{
                 git branch: 'feature', url: 'https://github.com/harshakuchu/Embedded.git'
             }
         }
-        stage('making director'){
+        stage('changing directory'){
             steps{
-                sh 'mkdir project'
-                sh 'cd project'
+                sh 'cd build'
             }
         }
         stage('Cmake Build'){
