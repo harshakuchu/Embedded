@@ -8,6 +8,7 @@ pipeline{
         }
         stage('Cmake Build'){
             steps{
+                sh 'pwd'
                 sh 'cmake ..'
             }
         }
