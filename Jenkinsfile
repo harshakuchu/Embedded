@@ -14,6 +14,7 @@ pipeline{
         stage('Make'){
             steps{
                 sh 'cd /var/lib/jenkins/workspace/pp2/build/'
+                sh 'pwd'
                 sh 'make'
             }
         }
