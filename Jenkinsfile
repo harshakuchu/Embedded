@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Cmake Build'){
             steps{
-                sh 'cmake ..'
+                cmake arguments: 'cmake ..', installation: 'InSearchPath', workingDir: '/var/lib/jenkins/workspace/pp2/'
             }
         }
         stage('Make'){
