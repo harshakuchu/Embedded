@@ -9,7 +9,7 @@ pipeline{
         stage('Cmake Build'){
             steps{
                 sh 'pwd'
-                sh 'chmod +x CMakeLists.txt'
+                sh 'cd /var/lib/jenkins/workspace/pp2/'
                 sh 'cmake ..'
             }
         }
