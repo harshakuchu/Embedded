@@ -3,28 +3,25 @@ pipeline{
     stages {
         stage('git checkout'){
             steps{
-                git branch: 'dev', url: 'https://github.com/harshakuchu/Embedded.git'
-            }
-        }
-        stage('mkdir'){
-            steps{
-                sh 'mkdir project'
-            }
-        }
-        stage('cd'){
-            steps{
-                sh 'cd project'
+                git branch: 'feature', url: 'https://github.com/harshakuchu/Embedded.git'
             }
         }
         stage('Cmake Build'){
             steps{
-                sh 'cmake ..'
+                cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: '/var/lib/jenkins/workspace/pp2/'
             }
         }
-        stage('Make'){
-            steps{
+        stage('Unit_Test') {
+            steps {
+                sh 'cmake CMakeLists.txt'
                 sh 'make'
+                sh './executeTests'
             }
         }
+       stage('CppCheck') {
+            steps {
+                sh 'cppcheck --enable=all --check-config *.cpp'
+            }
+        } 
     }
 }

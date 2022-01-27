@@ -1,5 +1,5 @@
 add_library(utils
-        /home/ubuntu/Embedded/utils/src/FileLoader.cpp
-        /home/ubuntu/Embedded/utils/src/StringHelper.cpp)
+        /var/lib/jenkins/workspace/pp2/utils/src/FileLoader.cpp
+        /var/lib/jenkins/workspace/pp2/utils/src/StringHelper.cpp)
 
 target_include_directories(utils PUBLIC include)
