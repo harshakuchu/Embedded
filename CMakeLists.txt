@@ -4,7 +4,6 @@ project(jenkinsexample_Project VERSION 1.0.0)
 
 add_subdirectory(day01)
 add_subdirectory(utils)
-add_subdirectory(unit_tests)
 
 add_executable(jenkinsexample
         /var/lib/jenkins/workspace/pp2/day01/src/main.cpp)
