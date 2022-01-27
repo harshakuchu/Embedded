@@ -18,12 +18,10 @@ pipeline{
                 sh './executeTests'
             }
         }
-        stage('Make'){
-            steps{
-                sh 'cd ./var/lib/jenkins/workspace/pp2/build/'
-                sh 'pwd'
-                sh 'make'
+       stage('CppCheck') {
+            steps {
+                sh 'cppcheck --enable=all --check-config *.cpp'
             }
-        }
+        } 
     }
 }
