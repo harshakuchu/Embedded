@@ -11,9 +11,11 @@ pipeline{
                 cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: '/var/lib/jenkins/workspace/pp2/'
             }
         }
-        stage('Test') {
+        stage('Unit_Test') {
             steps {
-                ctest arguments: 'ctest', installation: 'InSearchPath', workingDir: '/var/lib/jenkins/workspace/pp2/day01/'
+                sh 'cmake CMakeLists.txt'
+                sh 'make'
+                sh './executeTests'
             }
         }
         stage('Make'){
