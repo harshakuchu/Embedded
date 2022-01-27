@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Make'){
             steps{
-                sh 'chown -R /var/lib/jenkins/workspace/pp2/'
+                sh 'chown -R root:root /var/lib/jenkins/workspace/pp2/'
                 sh 'cd /var/lib/jenkins/workspace/pp2/build/'
                 sh 'pwd'
                 sh 'make'
