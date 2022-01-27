@@ -20,6 +20,7 @@ pipeline{
         }
        stage('CppCheck') {
             steps {
+                sh 'cd var/lib/jenkins/workspace/pp2/day01/src/'
                 sh 'cppcheck --enable=all --check-config *.cpp'
             }
         } 
