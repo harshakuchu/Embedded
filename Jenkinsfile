@@ -13,7 +13,6 @@ pipeline{
         }
         stage('Make'){
             steps{
-                sh 'chmod 777 ./var/lib/jenkins/workspace/pp2/'
                 sh 'cd ./var/lib/jenkins/workspace/pp2/build/'
                 sh 'pwd'
                 sh 'make'
