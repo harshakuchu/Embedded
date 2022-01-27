@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Test') {
             steps {
-                ctest arguments: 'ctest', installation: 'InSearchPath', workingDir: '/var/lib/jenkins/workspace/pp2/'
+                ctest arguments: 'ctest', installation: 'InSearchPath', workingDir: '/var/lib/jenkins/workspace/pp2/day01/unit_tests/'
             }
         }
         stage('Make'){
