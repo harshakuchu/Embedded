@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Test') {
             steps {
-                ctest 'InSearchPath'
+                ctest 'var/lib/jenkins/workspace/pp2/'
             }
         }
         stage('Make'){
