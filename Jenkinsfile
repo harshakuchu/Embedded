@@ -9,6 +9,7 @@ pipeline{
         stage('Cmake Build'){
             steps{
                 cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: '/var/lib/jenkins/workspace/pp2/'
+                sh 'make'
             }
         }
         stage('Unit_Test') {
