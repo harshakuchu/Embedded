@@ -1,9 +1,11 @@
 pipeline{
-    agent any
+    agent{
+        label 'LinSlave'
+    }
     stages {
         stage('git checkout'){
             steps{
-                git branch: 'feature', url: 'https://github.com/harshakuchu/Embedded.git'
+                git branch: 'dev', url: 'https://github.com/harshakuchu/Embedded.git'
             }
         }
         stage('Cmake Build'){
