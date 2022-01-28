@@ -10,7 +10,6 @@ pipeline{
         }
         stage('Cmake Build'){
             steps{
-                sh 'su harsha'
                 sh 'pwd'
                 cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: '/home/harsha/workspace/pp1/'
             }
