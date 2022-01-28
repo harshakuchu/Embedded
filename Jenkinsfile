@@ -10,7 +10,7 @@ pipeline{
         }
         stage('Cmake Build'){
             steps{
-                cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: '/var/lib/jenkins/workspace/pp2/'
+                cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: '/home/harsha/workspace/pp1/'
             }
         }
         stage('Unit_Test') {
