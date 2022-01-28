@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label 'LinSlave'
+        label 'LinSlave1'
     }
     stages {
         stage('git checkout'){
