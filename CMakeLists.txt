@@ -7,6 +7,6 @@ add_subdirectory(utils)
 
 
 add_executable(jenkinsexample
-        /var/lib/jenkins/workspace/pp2/day01/src/main.cpp)
+        /home/harsha/workspace/pp2/day01/src/main.cpp)
 
 target_link_libraries(jenkinsexample PRIVATE day01 utils)
