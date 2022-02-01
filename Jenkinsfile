@@ -11,7 +11,7 @@ pipeline{
         stage('Cmake Build'){
             steps{
                 sh 'pwd'
-                cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: 'C:/user/Administrator/workspace/winpp/'
+                cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: 'C:/jenkins_slavenode/workspace/winpp/'
             }
         }
         stage('Unit_Test') {
@@ -23,7 +23,7 @@ pipeline{
         }
        stage('CppCheck') {
             steps {
-                sh 'cd /home/harsha/workspace/pp2/day01/src/'
+                sh 'cd C:/jenkins_slavenode/workspace/pp2/day01/src/'
                 sh 'cppcheck --enable=all --check-config *.cpp'
             }
         } 
