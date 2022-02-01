@@ -1,17 +1,17 @@
 pipeline{
     agent{
-        label 'LinSlave1'
+        label 'WinSlave1'
     }
     stages {
         stage('git checkout'){
             steps{
-                git branch: 'dev', url: 'https://github.com/harshakuchu/Embedded.git'
+                git branch: 'windows', url: 'https://github.com/harshakuchu/Embedded.git'
             }
         }
         stage('Cmake Build'){
             steps{
                 sh 'pwd'
-                cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: '/home/harsha/workspace/pp1/'
+                cmakeBuild buildDir: 'build', cleanBuild: true, installation: 'InSearchPath', sourceDir: 'C:/user/Administrator/workspace/winpp/'
             }
         }
         stage('Unit_Test') {
