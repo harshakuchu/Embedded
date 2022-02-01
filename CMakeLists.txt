@@ -11,4 +11,4 @@ add_executable(jenkinsexample
         /home/harsha/workspace/pp1/utils/src/FileLoader.cpp
         /home/harsha/workspace/pp1/utils/src/StringHelper.cpp)
 
-target_link_libraries(jenkinsexample INTERFACE day01 utils)
+target_link_libraries(jenkinsexample PUBLIC day01 utils)
